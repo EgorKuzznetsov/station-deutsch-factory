@@ -291,6 +291,9 @@ export default {
       if (p === "/privacy") return html(page("Privacy Policy", PRIVACY));
       if (p === "/terms") return html(page("Terms of Service", TERMS));
       if (p === "/health") return json({ ok: true });
+      // Подтверждение адреса для TikTok (URL properties → URL prefix → файл-подпись)
+      if (env.TIKTOK_VERIFY_NAME && p === "/" + String(env.TIKTOK_VERIFY_NAME).replace(/^\//, ""))
+        return new Response(String(env.TIKTOK_VERIFY_CONTENT || ""), { headers: { "content-type": "text/plain; charset=utf-8" } });
 
       // --- API фабрики (GitHub Actions)
       if (p.startsWith("/factory/")) {
