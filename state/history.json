@@ -35,7 +35,13 @@
    "id": "fQ4MRMhA4CU",
    "url": "https://youtube.com/shorts/fQ4MRMhA4CU",
    "privacy": "public",
-   "status": "published"
+   "status": "published",
+   "stats": {
+    "views": 7,
+    "likes": 1,
+    "comments": 0,
+    "privacy": "public"
+   }
   },
   "tiktok": {
    "status": "not_connected"
@@ -59,7 +65,13 @@
    "id": "TTvkjRKfe04",
    "url": "https://youtube.com/shorts/TTvkjRKfe04",
    "privacy": "public",
-   "status": "published"
+   "status": "published",
+   "stats": {
+    "views": 56,
+    "likes": 1,
+    "comments": 0,
+    "privacy": "public"
+   }
   },
   "tiktok": {
    "status": "not_connected"
