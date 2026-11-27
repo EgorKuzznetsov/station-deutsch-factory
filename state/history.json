@@ -79,5 +79,26 @@
   "telegram": {
    "ok": true
   }
+ },
+ {
+  "id": "20261127-160718-ae8b2b",
+  "created": "2026-11-27T16:07:27Z",
+  "format": "translate",
+  "level": "A1",
+  "lang": "uk",
+  "theme": "berlin",
+  "duration": 12.5,
+  "title": "Що означає «der Wind»? Німецька за 10 секунд",
+  "key": "translate:n:Wind",
+  "runId": "46030806459",
+  "youtube": null,
+  "tiktok": {
+   "publish_id": "v_inbox_file~v2.7712883450558318614",
+   "mode": "inbox",
+   "status": "sent_to_inbox"
+  },
+  "telegram": {
+   "ok": true
+  }
  }
 ]
