@@ -43,7 +43,7 @@ def title_for(spec):
     elif f == "level_test":
         s = "Тест: твій рівень німецької A1–B2" if uk else "Тест: твой уровень немецкого A1–B2"
     elif f == "a1_vs_b2":
-        s = (f"«{c.get('top', '')}» — як сказати на B2?" if uk else f"«{c.get('top', '')}» — как сказать на B2?")
+        s = (f"«{c.get('top', '')}»: як сказати на B2?" if uk else f"«{c.get('top', '')}»: как сказать на B2?")
     elif f == "five_words":
         topic = spec.get("extra", {}).get("topic", "")
         s = (f"5 німецьких слів: {topic}" if uk else f"5 немецких слов: {topic}")
@@ -53,17 +53,17 @@ def title_for(spec):
     elif f == "fill_blank":
         s = (f"Встав слово: «{q.get('big', '')}»" if uk else f"Вставь слово: «{q.get('big', '')}»")
     elif f == "mistakes":
-        s = (f"«{c.get('top', '')}» — так не кажуть!" if uk else f"«{c.get('top', '')}» — так не говорят!")
+        s = (f"«{c.get('top', '')}»: так не кажуть!" if uk else f"«{c.get('top', '')}»: так не говорят!")
     else:
         s = "Міні-іспит з німецької: 3 питання" if uk else "Мини-экзамен по немецкому: 3 вопроса"
     return s.strip()
 
 
-def hashtags(spec, n=8):
+def hashtags(spec, n=5):
     lang = spec["lang"] if spec["lang"] in TAGS else "uk"
     ft = (FMT_TAGS_RU if lang == "ru" else {}).get(spec["format"]) or FMT_TAGS.get(spec["format"], [])
     lv = ["#deutsch" + spec.get("level", "A1").lower()]
-    return (TAGS[lang][:4] + ft + lv + TAGS[lang][4:])[:n]
+    return (TAGS[lang][:3] + ft[:1] + lv + TAGS[lang][3:])[:n]
 
 
 def build(spec, settings):
@@ -77,7 +77,7 @@ def build(spec, settings):
     ans = t["desc_save"] if learn else t["desc_answer"]
     yt_desc = (f"{title}\n\n{ans}\n\n{t['desc_cta']}\n👉 Telegram: {link}\n\n" + " ".join(tags))
     tt_caption = (f"{title} 🇩🇪\n{ans}\n"
-                  f"{'Більше — у Telegram' if spec['lang'] == 'uk' else 'Больше — в Telegram'}: @{handle}\n"
+                  f"{'Більше у Telegram' if spec['lang'] == 'uk' else 'Больше в Telegram'}: @{handle}\n"
                   + " ".join(tags))
     tg_caption = f"🎬 {title}\n\nTikTok:\n{tt_caption}"
     return {"title": title, "youtube": {"title": yt_title, "description": yt_desc,

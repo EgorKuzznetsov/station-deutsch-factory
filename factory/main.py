@@ -130,7 +130,7 @@ def produce(count=1, fmt=None, no_publish=False, theme=None, force=False, record
                 f"   YouTube: {yt.get('status', '—')} {yt.get('url', '')}  ·  TikTok: {tt.get('status', '—')}")
         for name, r in (("YouTube", yt), ("TikTok", tt)):
             if r.get("status") in ("error", "failed", "locked_private"):
-                telegram.send_text(f"⚠️ {name}: {r.get('status')} — {r.get('note', '')}\n{m['title']}")
+                telegram.send_text(f"⚠️ {name}: {r.get('status')}: {r.get('note', '')}\n{m['title']}")
         results.append(entry)
     return results
 

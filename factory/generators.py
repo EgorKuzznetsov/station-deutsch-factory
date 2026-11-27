@@ -90,7 +90,7 @@ class Gen:
                 break
         opts, ans = _shuffle_opts(self.rng, n[self.lang], wrong)
         sc = _mcq(self.t["q"]["translate"], n["de"], opts, ans, think, reveal,
-                  explain=f'{n["art"]} {n["de"]} — {n[self.lang]}', counter=counter, big_article=n["art"])
+                  explain=f'{n["art"]} {n["de"]} = {n[self.lang]}', counter=counter, big_article=n["art"])
         return sc, [n]
 
     def phrase_question(self, think, reveal, counter=""):
