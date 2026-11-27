@@ -37,7 +37,7 @@
    "privacy": "public",
    "status": "published",
    "stats": {
-    "views": 7,
+    "views": 6,
     "likes": 1,
     "comments": 0,
     "privacy": "public"
@@ -67,7 +67,7 @@
    "privacy": "public",
    "status": "published",
    "stats": {
-    "views": 56,
+    "views": 120,
     "likes": 1,
     "comments": 0,
     "privacy": "public"
@@ -116,7 +116,13 @@
    "id": "NwvuIZx3pes",
    "url": "https://youtube.com/shorts/NwvuIZx3pes",
    "privacy": "public",
-   "status": "published"
+   "status": "published",
+   "stats": {
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "privacy": "public"
+   }
   },
   "tiktok": {
    "publish_id": "v_inbox_file~v2.7712897545554659351",
