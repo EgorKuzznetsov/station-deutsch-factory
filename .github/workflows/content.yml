@@ -1,0 +1,36 @@
+name: content
+# Раз в неделю: (опционально) пополняет банк заданий через бесплатный Gemini и проверяет весь банк
+# через LanguageTool. Без GEMINI_API_KEY просто проверяет банк.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 2 * * 0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: factory
+  cancel-in-progress: false
+
+jobs:
+  content:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          pip install -r requirements.txt
+          python -m factory.refill --n 12
+          python -m factory.main validate || echo "::warning::Есть задания с замечаниями — см. Summary"
+      - run: |
+          git config user.name "factory-bot"
+          git config user.email "factory-bot@users.noreply.github.com"
+          git add state factory/content/generated 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "content: weekly refill/validate"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && exit 0; sleep 5; done

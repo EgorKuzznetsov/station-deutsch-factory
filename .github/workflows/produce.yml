@@ -1,0 +1,73 @@
+name: produce
+# Создаёт и публикует ролики. Запускается панелью управления (точное время из настроек)
+# или вручную: Actions → produce → Run workflow.
+on:
+  workflow_dispatch:
+    inputs:
+      count: { description: "Сколько роликов", default: "1" }
+      format: { description: "Формат (пусто = автоматически)", default: "" }
+      slot: { description: "Слот расписания", default: "manual" }
+  schedule:
+    # Резервное расписание: 12:00 и 18:00 по Берлину (летом и зимой — шаг ниже отсекает лишний час).
+    # Работает, только если в Settings → Variables создать USE_GH_SCHEDULE = 1 (когда панель не используется).
+    - cron: "0 10,11,16,17 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: factory
+  cancel-in-progress: false
+
+jobs:
+  produce:
+    if: github.event_name != 'schedule' || vars.USE_GH_SCHEDULE == '1'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Проверка времени (только для резервного расписания)
+        if: github.event_name == 'schedule'
+        run: |
+          H=$(TZ=Europe/Berlin date +%H)
+          if [ "$H" != "12" ] && [ "$H" != "18" ]; then echo "SKIP=1" >> $GITHUB_ENV; fi
+      - uses: actions/checkout@v4
+        if: env.SKIP != '1'
+      - uses: actions/setup-python@v5
+        if: env.SKIP != '1'
+        with: { python-version: "3.12", cache: pip }
+      - name: Зависимости
+        if: env.SKIP != '1'
+        run: |
+          pip install -r requirements.txt
+          which ffmpeg || (sudo apt-get update -q && sudo apt-get install -y -q ffmpeg)
+      - name: Создать и опубликовать
+        if: env.SKIP != '1'
+        env:
+          FACTORY_URL: ${{ secrets.FACTORY_URL }}
+          FACTORY_SECRET: ${{ secrets.FACTORY_SECRET }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          ARGS="--count ${{ github.event.inputs.count || '1' }}"
+          if [ -n "${{ github.event.inputs.format }}" ]; then ARGS="$ARGS --format ${{ github.event.inputs.format }}"; fi
+          python -m factory.main produce $ARGS
+      - name: Сохранить видео (14 дней)
+        if: always() && env.SKIP != '1'
+        uses: actions/upload-artifact@v4
+        with:
+          name: videos
+          path: out/
+          retention-days: 14
+          if-no-files-found: ignore
+      - name: Сохранить историю
+        if: always() && env.SKIP != '1'
+        run: |
+          git config user.name "factory-bot"
+          git config user.email "factory-bot@users.noreply.github.com"
+          git add state factory/content/generated 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "state: ${{ github.run_id }}"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && exit 0; sleep 5; done

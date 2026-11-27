@@ -1,0 +1,248 @@
+# артикль|слово|українська|русский|рівень|тема
+# Только существительные в единственном числе с однозначным артиклем.
+der|Arbeitgeber|роботодавець|работодатель|A2|job
+der|Arbeitnehmer|працівник|работник|B1|job
+die|Ausbildung|професійне навчання|профобучение|A2|job
+die|Bewerbung|заявка на вакансію|отклик на вакансию|A2|job
+der|Lebenslauf|резюме|резюме|A2|job
+das|Vorstellungsgespräch|співбесіда|собеседование|B1|job
+der|Vertrag|договір|договор|A2|job
+das|Gehalt|зарплата|зарплата|A2|job
+der|Lohn|оплата праці|оплата труда|A2|job
+die|Schicht|зміна (на роботі)|смена (на работе)|A2|job
+der|Feierabend|кінець робочого дня|конец рабочего дня|A2|job
+der|Urlaub|відпустка|отпуск|A1|job
+die|Krankmeldung|лікарняний|больничный|B1|job
+der|Kollege|колега|коллега|A1|office
+der|Chef|начальник|начальник|A1|office
+die|Besprechung|нарада|совещание|B1|office
+die|Pause|перерва|перерыв|A1|office
+das|Büro|офіс|офис|A1|office
+die|Firma|фірма|фирма|A1|office
+das|Unternehmen|підприємство|предприятие|B1|office
+der|Betrieb|виробництво|производство|B1|job
+die|Probezeit|випробувальний термін|испытательный срок|B1|job
+die|Kündigung|звільнення|увольнение|B1|job
+die|Überstunde|понаднормова година|сверхурочный час|B1|job
+die|Berufsschule|професійна школа|профессиональная школа|A2|job
+der|Beruf|професія|профессия|A1|job
+die|Stelle|вакансія|вакансия|A2|job
+die|Arbeitszeit|робочий час|рабочее время|A2|job
+die|Erfahrung|досвід|опыт|B1|job
+die|Verantwortung|відповідальність|ответственность|B1|job
+die|Pünktlichkeit|пунктуальність|пунктуальность|B1|job
+das|Werkzeug|інструмент|инструмент|B1|job
+der|Kunde|клієнт|клиент|A2|job
+die|Bestellung|замовлення|заказ|A2|job
+die|Lieferung|доставка|доставка|B1|job
+das|Lager|склад|склад|B1|job
+die|Ware|товар|товар|B1|job
+der|Preis|ціна|цена|A1|shop
+die|Steuer|податок|налог|B1|office
+die|Rechnung|рахунок до оплати|счёт к оплате|A2|office
+die|Quittung|квитанція|квитанция|B1|office
+das|Formular|бланк|бланк|A2|office
+der|Antrag|заява|заявление|B1|office
+die|Behörde|орган влади|орган власти|B1|office
+das|Amt|державна установа|ведомство|B1|office
+der|Termin|запис на прийом|запись на приём|A1|office
+die|Unterschrift|підпис|подпись|A2|office
+die|Anmeldung|реєстрація|регистрация|A2|office
+der|Ausweis|посвідчення особи|удостоверение личности|A2|office
+das|Datum|дата|дата|A1|office
+die|Adresse|адреса|адрес|A1|office
+die|Telefonnummer|номер телефону|номер телефона|A1|office
+die|Wohnung|квартира|квартира|A1|home
+die|Miete|орендна плата|арендная плата|A2|home
+der|Vermieter|орендодавець|арендодатель|B1|home
+der|Nachbar|сусід|сосед|A1|home
+der|Schlüssel|ключ|ключ|A1|home
+die|Tür|двері|дверь|A1|home
+das|Fenster|вікно|окно|A1|home
+der|Tisch|стіл|стол|A1|home
+der|Stuhl|стілець|стул|A1|home
+das|Bett|ліжко|кровать|A1|home
+die|Lampe|лампа|лампа|A1|home
+der|Kühlschrank|холодильник|холодильник|A1|home
+die|Küche|кухня|кухня|A1|home
+das|Bad|ванна кімната|ванная|A1|home
+das|Zimmer|кімната|комната|A1|home
+die|Treppe|сходи|лестница|A2|home
+der|Aufzug|ліфт|лифт|A2|home
+der|Boden|підлога|пол|A2|home
+die|Wand|стіна|стена|A1|home
+das|Dach|дах|крыша|A2|home
+der|Keller|підвал|подвал|A2|home
+der|Müll|сміття|мусор|A2|home
+die|Waschmaschine|пральна машина|стиральная машина|A2|home
+der|Staubsauger|пилосос|пылесос|A2|home
+der|Arzt|лікар|врач|A1|health
+das|Krankenhaus|лікарня|больница|A1|health
+die|Apotheke|аптека|аптека|A1|health
+das|Rezept|рецепт|рецепт|A2|health
+die|Versicherung|страховка|страховка|A2|health
+die|Krankenkasse|лікарняна каса|больничная касса|B1|health
+das|Medikament|ліки|лекарство|A2|health
+der|Schmerz|біль|боль|A2|health
+das|Fieber|жар|жар|A2|health
+die|Gesundheit|здоров'я|здоровье|A2|health
+der|Bahnhof|вокзал|вокзал|A1|transport
+der|Zug|потяг|поезд|A1|transport
+die|Haltestelle|зупинка|остановка|A1|transport
+der|Bus|автобус|автобус|A1|transport
+die|Fahrkarte|квиток|билет|A1|transport
+die|Straßenbahn|трамвай|трамвай|A1|transport
+das|Fahrrad|велосипед|велосипед|A1|transport
+das|Auto|автомобіль|машина|A1|transport
+der|Führerschein|посвідчення водія|водительские права|A2|transport
+die|Ampel|світлофор|светофор|A2|transport
+die|Kreuzung|перехрестя|перекрёсток|A2|transport
+der|Flughafen|аеропорт|аэропорт|A1|transport
+das|Geld|гроші|деньги|A1|shop
+die|Bank|банк|банк|A1|shop
+das|Konto|банківський рахунок|банковский счёт|A2|shop
+die|Überweisung|грошовий переказ|денежный перевод|B1|shop
+der|Supermarkt|супермаркет|супермаркет|A1|shop
+die|Kasse|каса|касса|A1|shop
+der|Einkauf|покупка|покупка|A2|shop
+die|Tasche|сумка|сумка|A1|shop
+der|Rucksack|рюкзак|рюкзак|A1|shop
+das|Brot|хліб|хлеб|A1|food
+die|Milch|молоко|молоко|A1|food
+der|Käse|сир|сыр|A1|food
+die|Butter|вершкове масло|сливочное масло|A1|food
+das|Ei|яйце|яйцо|A1|food
+der|Apfel|яблуко|яблоко|A1|food
+die|Banane|банан|банан|A1|food
+das|Wasser|вода|вода|A1|food
+der|Kaffee|кава|кофе|A1|food
+der|Tee|чай|чай|A1|food
+das|Bier|пиво|пиво|A1|food
+der|Saft|сік|сок|A1|food
+das|Fleisch|м'ясо|мясо|A1|food
+der|Fisch|риба|рыба|A1|food
+das|Gemüse|овочі|овощи|A1|food
+das|Obst|фрукти|фрукты|A1|food
+die|Kartoffel|картопля|картофель|A1|food
+die|Zwiebel|цибуля|лук|A2|food
+der|Löffel|ложка|ложка|A1|kitchen
+die|Gabel|виделка|вилка|A1|kitchen
+das|Messer|ніж|нож|A1|kitchen
+der|Teller|тарілка|тарелка|A1|kitchen
+die|Tasse|чашка|чашка|A1|kitchen
+das|Glas|склянка|стакан|A1|kitchen
+die|Flasche|пляшка|бутылка|A1|kitchen
+der|Topf|каструля|кастрюля|A2|kitchen
+die|Pfanne|сковорідка|сковорода|A2|kitchen
+der|Hund|собака|собака|A1|city
+die|Katze|кішка|кошка|A1|city
+das|Haus|будинок|дом|A1|city
+die|Stadt|місто|город|A1|city
+das|Dorf|село|деревня|A1|city
+der|Garten|сад|сад|A1|city
+die|Straße|вулиця|улица|A1|city
+die|Kirche|церква|церковь|A1|city
+das|Hotel|готель|отель|A1|city
+das|Rathaus|ратуша|ратуша|A2|city
+die|Schule|школа|школа|A1|school
+der|Lehrer|вчитель|учитель|A1|school
+die|Prüfung|іспит|экзамен|A2|school
+der|Kurs|курс|курс|A1|school
+die|Aufgabe|завдання|задание|A1|school
+das|Wort|слово|слово|A1|school
+die|Sprache|мова|язык|A1|school
+der|Satz|речення|предложение|A2|school
+die|Frage|питання|вопрос|A1|school
+die|Antwort|відповідь|ответ|A1|school
+das|Buch|книга|книга|A1|school
+das|Heft|зошит|тетрадь|A1|school
+der|Kugelschreiber|ручка|ручка|A1|school
+der|Bleistift|олівець|карандаш|A1|school
+der|Computer|комп'ютер|компьютер|A1|school
+das|Handy|мобільний телефон|мобильный телефон|A1|school
+die|Nachricht|повідомлення|сообщение|A2|school
+der|Brief|лист (паперовий)|письмо|A1|school
+die|Zeitung|газета|газета|A1|school
+das|Wetter|погода|погода|A1|weather
+der|Regen|дощ|дождь|A1|weather
+der|Schnee|сніг|снег|A1|weather
+die|Sonne|сонце|солнце|A1|weather
+der|Wind|вітер|ветер|A1|weather
+der|Himmel|небо|небо|A2|weather
+das|Gewitter|гроза|гроза|A2|weather
+der|Baum|дерево|дерево|A1|nature
+die|Blume|квітка|цветок|A1|nature
+der|Berg|гора|гора|A1|nature
+das|Meer|море|море|A1|nature
+der|Fluss|річка|река|A1|nature
+der|Wald|ліс|лес|A1|nature
+die|Woche|тиждень|неделя|A1|time
+der|Monat|місяць|месяц|A1|time
+das|Jahr|рік|год|A1|time
+der|Tag|день|день|A1|time
+die|Nacht|ніч|ночь|A1|time
+der|Morgen|ранок|утро|A1|time
+der|Abend|вечір|вечер|A1|time
+die|Uhr|годинник|часы|A1|time
+die|Stunde|година|час (60 минут)|A1|time
+die|Minute|хвилина|минута|A1|time
+der|Geburtstag|день народження|день рождения|A1|family
+das|Geschenk|подарунок|подарок|A1|family
+die|Familie|сім'я|семья|A1|family
+der|Vater|батько|отец|A1|family
+die|Mutter|мати|мать|A1|family
+das|Kind|дитина|ребёнок|A1|family
+der|Bruder|брат|брат|A1|family
+die|Schwester|сестра|сестра|A1|family
+der|Sohn|син|сын|A1|family
+die|Tochter|донька|дочь|A1|family
+das|Mädchen|дівчинка|девочка|A1|family
+der|Junge|хлопчик|мальчик|A1|family
+der|Kopf|голова|голова|A1|body
+das|Auge|око|глаз|A1|body
+das|Ohr|вухо|ухо|A1|body
+die|Nase|ніс|нос|A1|body
+der|Mund|рот|рот|A1|body
+der|Zahn|зуб|зуб|A1|body
+das|Herz|серце|сердце|A2|body
+der|Bauch|живіт|живот|A2|body
+der|Rücken|спина|спина|A2|body
+das|Bein|нога|нога|A1|body
+die|Hand|кисть руки|кисть руки|A1|body
+die|Jacke|куртка|куртка|A1|clothes
+der|Mantel|пальто|пальто|A1|clothes
+das|Hemd|сорочка|рубашка|A1|clothes
+die|Hose|штани|брюки|A1|clothes
+der|Schuh|черевик|ботинок|A1|clothes
+das|Kleid|сукня|платье|A1|clothes
+der|Rock|спідниця|юбка|A1|clothes
+die|Mütze|шапка|шапка|A1|clothes
+der|Regenschirm|парасолька|зонт|A2|clothes
+die|Möglichkeit|можливість|возможность|B1|abstract
+die|Entscheidung|рішення|решение|B1|abstract
+die|Bedingung|умова|условие|B1|abstract
+die|Voraussetzung|передумова|предпосылка|B2|abstract
+die|Herausforderung|виклик|вызов (трудная задача)|B2|abstract
+die|Auseinandersetzung|суперечка|спор|B2|abstract
+der|Zusammenhang|взаємозв'язок|взаимосвязь|B2|abstract
+das|Ergebnis|результат|результат|B1|abstract
+der|Vorschlag|пропозиція|предложение (идея)|B1|abstract
+die|Fähigkeit|здібність|способность|B2|abstract
+die|Gelegenheit|нагода|удобный случай|B2|abstract
+der|Erfolg|успіх|успех|B1|abstract
+das|Gefühl|почуття|чувство|B1|abstract
+die|Angst|страх|страх|A2|abstract
+die|Freude|радість|радость|A2|abstract
+der|Fehler|помилка|ошибка|A1|abstract
+das|Problem|проблема|проблема|A1|abstract
+die|Idee|ідея|идея|A1|abstract
+das|Ziel|мета|цель|A2|abstract
+die|Sicherheit|безпека|безопасность|B1|abstract
+die|Umgebung|оточення|окружение|B1|abstract
+die|Hilfe|допомога|помощь|A1|abstract
+die|Musik|музика|музыка|A1|free
+der|Film|фільм|фильм|A1|free
+das|Spiel|гра|игра|A1|free
+der|Sport|спорт|спорт|A1|free
+die|Mannschaft|команда|команда|A2|free
+das|Radio|радіо|радио|A1|free

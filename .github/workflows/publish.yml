@@ -1,0 +1,49 @@
+name: publish
+# Публикация ролика после одобрения в панели (режим «одобрять вручную» для TikTok).
+on:
+  workflow_dispatch:
+    inputs:
+      id: { description: "ID ролика", required: true }
+      run_id: { description: "ID запуска produce, где лежит видео", required: true }
+      platform: { description: "tiktok или youtube", default: "tiktok" }
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: factory
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/download-artifact@v4
+        with:
+          name: videos
+          path: out/
+          run-id: ${{ github.event.inputs.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Опубликовать
+        env:
+          FACTORY_URL: ${{ secrets.FACTORY_URL }}
+          FACTORY_SECRET: ${{ secrets.FACTORY_SECRET }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: |
+          pip install -r requirements.txt
+          python -m factory.main publish --id "${{ github.event.inputs.id }}" --platform "${{ github.event.inputs.platform }}"
+      - name: Сохранить историю
+        if: always()
+        run: |
+          git config user.name "factory-bot"
+          git config user.email "factory-bot@users.noreply.github.com"
+          git add state
+          git diff --cached --quiet && exit 0
+          git commit -m "publish: ${{ github.event.inputs.id }}"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && exit 0; sleep 5; done

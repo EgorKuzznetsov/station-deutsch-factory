@@ -1,0 +1,38 @@
+{
+  "enabled": true,
+  "botHandle": "station_deutsch_bot",
+  "botUrl": "https://t.me/station_deutsch_bot",
+  "uiLang": "uk",
+  "timezone": "Europe/Berlin",
+  "schedule": ["12:00", "18:00"],
+  "levels": ["A1", "A2", "B1", "B2"],
+  "theme": "rotate",
+  "thinkSeconds": 5,
+  "sound": {"enabled": true, "volume": 70},
+  "cooldownDays": 60,
+  "autoOptimize": true,
+  "cta": {"line1": "", "line3": ""},
+  "formats": {
+    "translate": {"enabled": true, "weight": 1},
+    "find_error": {"enabled": true, "weight": 1},
+    "article": {"enabled": true, "weight": 1.2},
+    "level_test": {"enabled": true, "weight": 1},
+    "a1_vs_b2": {"enabled": true, "weight": 1},
+    "five_words": {"enabled": true, "weight": 1},
+    "phrases": {"enabled": true, "weight": 1},
+    "fill_blank": {"enabled": true, "weight": 1},
+    "mistakes": {"enabled": true, "weight": 1},
+    "mini_exam": {"enabled": true, "weight": 1}
+  },
+  "publish": {"youtube": true, "tiktok": true, "telegram": true},
+  "youtube": {"privacy": "public"},
+  "tiktok": {
+    "mode": "inbox",
+    "privacy": "PUBLIC_TO_EVERYONE",
+    "requireApproval": false,
+    "disableComment": false,
+    "disableDuet": false,
+    "disableStitch": false,
+    "brandOrganic": true
+  }
+}
