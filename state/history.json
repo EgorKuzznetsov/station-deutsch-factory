@@ -43,5 +43,29 @@
   "telegram": {
    "ok": true
   }
+ },
+ {
+  "id": "20261127-110134-eca49a",
+  "created": "2026-11-27T11:01:51Z",
+  "format": "mini_exam",
+  "level": "B1",
+  "lang": "uk",
+  "theme": "midnight",
+  "duration": 24.5,
+  "title": "Міні-іспит з німецької: 3 питання",
+  "key": "mini_exam:f43,n:Sprache,n:Stadt",
+  "runId": "45986905143",
+  "youtube": {
+   "id": "TTvkjRKfe04",
+   "url": "https://youtube.com/shorts/TTvkjRKfe04",
+   "privacy": "public",
+   "status": "published"
+  },
+  "tiktok": {
+   "status": "not_connected"
+  },
+  "telegram": {
+   "ok": true
+  }
  }
 ]
