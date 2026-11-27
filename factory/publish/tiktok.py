@@ -118,6 +118,23 @@ def wait_status(token, publish_id, tries=20):
     return {"status": "processing"}
 
 
+def list_videos(token, limit=200):
+    """Все ролики аккаунта со статистикой (scope video.list). Работает и для роликов, опубликованных вручную."""
+    out, cursor = [], None
+    fields = "id,title,video_description,create_time,view_count,like_count,comment_count,share_count"
+    while len(out) < limit:
+        body = {"max_count": 20}
+        if cursor:
+            body["cursor"] = cursor
+        res, _ = request("POST", API + "/video/list/?fields=" + fields, data=body, headers=_h(token))
+        d = _check(res)
+        out += d.get("videos", [])
+        cursor = d.get("cursor")
+        if not d.get("has_more") or not cursor:
+            break
+    return out
+
+
 def stats(ids, token):
     out = {}
     for i in range(0, len(ids), 20):

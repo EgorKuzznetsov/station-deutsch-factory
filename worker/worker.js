@@ -34,7 +34,7 @@ const DEFAULTS = {
 };
 
 const YT_SCOPES = "https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.readonly";
-const TT_SCOPES = "user.info.basic,video.upload,video.publish";
+const TT_SCOPES = "user.info.basic,video.upload,video.publish,video.list";
 
 // ------------------------------------------------------------------ утилиты
 const json = (data, status = 200, headers = {}) =>
@@ -430,7 +430,7 @@ function load(){api('/api/state').then(function(d){S=d;DRAFT=JSON.parse(JSON.str
 function sw(id,on){return '<label class="sw"><input type="checkbox" id="'+id+'"'+(on?' checked':'')+'><span></span></label>'}
 function chip(st){var ok=['published','sent_to_inbox','ok'],bad=['error','failed','locked_private'];var c=ok.indexOf(st)>=0?'ok':bad.indexOf(st)>=0?'bad':'ac';var L={published:'опубликовано',sent_to_inbox:'во входящих TikTok',awaiting_approval:'ждёт одобрения',publishing:'публикуется',processing:'обрабатывается',error:'ошибка',failed:'ошибка',locked_private:'приватно (нужен аудит)',not_connected:'не подключено',off:'выкл'};return st?'<span class="chip '+c+'">'+esc(L[st]||st)+'</span>':'<span class="chip">—</span>'}
 function fmtDate(s){if(!s)return'';var d=new Date(s);return d.toLocaleDateString('ru-RU',{day:'2-digit',month:'2-digit'})+' '+d.toLocaleTimeString('ru-RU',{hour:'2-digit',minute:'2-digit'})}
-function views(e){var v=0;['youtube','tiktok'].forEach(function(p){if(e[p]&&e[p].stats)v+=e[p].stats.views||0});return v}
+function views(e){function g(p){return e[p]&&e[p].stats?e[p].stats.views||0:'—'}return 'YouTube '+g('youtube')+' · TikTok '+g('tiktok')}
 
 function vHome(){var s=S.settings,c=S.connections,h='';
  h+='<div class="card"><div class="row"><div><div class="big">'+S.today+' / '+s.schedule.length+'</div><div class="mu">роликов сегодня</div></div>'+sw('en',s.enabled)+'</div>';
@@ -453,10 +453,20 @@ function vHist(){if(!S.history.length)return '<div class="card mu">Истори�
  '<div class="row"><span>TikTok '+chip(t.status)+'</span>'+(t.status==='awaiting_approval'?'<button class="btn sm" data-ap="'+esc(e.id)+'">Опубликовать</button>':'')+'</div>'+
  '<div class="row"><span class="mu">👁 '+views(e)+' · '+esc(e.duration)+' с · тема '+esc(e.theme)+'</span></div></div>'}).join('')}
 
-function vStats(){var st=S.stats||{},bf=st.byFormat||{},mx=0;Object.keys(bf).forEach(function(k){mx=Math.max(mx,bf[k].weight||0)});
- var h='<div class="card"><div class="row"><div><div class="big">'+((st.totals||{}).videos||S.history.length)+'</div><div class="mu">роликов всего</div></div><div><div class="big">'+((st.totals||{}).views||0)+'</div><div class="mu">просмотров</div></div></div><div class="row"><span class="mu">Обновлено: '+(st.updated?fmtDate(st.updated):'ещё нет данных')+'</span><button class="btn sec sm" id="an">Обновить</button></div></div>';
- h+='<h2>Эффективность форматов</h2><div class="card">'+Object.keys(FMT).map(function(k){var b=bf[k]||{};var w=b.weight||1;return '<div class="row" style="display:block"><div class="row" style="min-height:0"><b>'+FMT[k]+'</b><span class="mu">вес '+w+' · '+(b.count||0)+' видео'+(b.median_score!=null?' · медиана '+Math.round(b.median_score):'')+'</span></div><div class="bar"><i style="width:'+Math.round(100*w/Math.max(mx,1.3))+'%"></i></div></div>'}).join('')+'</div>';
- h+='<div class="card mu">Счёт ролика = просмотры + 10×лайки + 20×комментарии + 20×репосты. При «Автооптимизации» система чаще выбирает форматы с лучшим результатом, но продолжает тестировать новые.</div>';
+function vStats(){var st=S.stats||{},P=st.platforms||{},pl=window.PL||'youtube',a=P[pl]||{},NM={youtube:'YouTube',tiktok:'TikTok'};
+ var h='<div class="card"><div class="row" style="gap:8px">'+['youtube','tiktok'].map(function(k){return '<button class="btn sm '+(pl===k?'':'sec')+'" data-pl="'+k+'" style="flex:1">'+NM[k]+'</button>'}).join('')+'</div></div>';
+ if(!st.platforms){return h+'<div class="card mu">Статистика ещё не собрана. Нажми «Обновить» — через 1–2 минуты данные появятся.</div><div style="padding:0 14px"><button class="btn sec" id="an">Обновить</button></div>'}
+ h+='<div class="card"><div class="row"><div><div class="big">'+(a.views||0)+'</div><div class="mu">просмотров</div></div><div><div class="big">'+(a.count||0)+'</div><div class="mu">роликов</div></div></div>';
+ h+='<div class="row"><span class="mu">❤️ '+(a.likes||0)+' · 💬 '+(a.comments||0)+' · среднее '+(a.avg||0)+'</span></div>';
+ if(pl==='tiktok'){if(!a.connected)h+='<div class="row"><span class="err" style="font-size:13px">Нет доступа к статистике TikTok: добавь scope video.list в TikTok for Developers и переподключи TikTok на главной.</span></div>';else if(a.accountViews!=null)h+='<div class="row"><span class="mu">Весь аккаунт: '+a.accountViews+' просмотров · '+a.accountVideos+' роликов</span></div>'}
+ h+='<div class="row"><span class="mu">Обновлено: '+fmtDate(st.updated)+' · авто каждые 3 ч</span><button class="btn sec sm" id="an">Обновить</button></div></div>';
+ var d=(st.daily||[]).slice(-14),mx=1;d.forEach(function(x){mx=Math.max(mx,(x.views||{})[pl]||0)});
+ h+='<h2>Просмотры по дням · '+NM[pl]+'</h2><div class="card">'+(d.length?'<div style="display:flex;align-items:flex-end;gap:4px;height:140px">'+d.map(function(x){var v=(x.views||{})[pl]||0;return '<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%"><span style="font-size:10px;color:var(--mu)">'+(v||'')+'</span><i style="display:block;width:100%;max-width:28px;border-radius:5px 5px 2px 2px;background:var(--ac);height:'+Math.max(2,Math.round(110*v/mx))+'px"></i><span style="font-size:9px;color:var(--mu);margin-top:4px">'+x.date.slice(8)+'.'+x.date.slice(5,7)+'</span></div>'}).join('')+'</div>':'<span class="mu">Данные появятся после первых суток.</span>')+'</div>';
+ var SL={'12:00':'12:00','18:00':'18:00','manual':'Вручную'},sl=st.slots||{};
+ h+='<h2>Время выхода · '+NM[pl]+'</h2><div class="card">'+Object.keys(SL).map(function(k){var b=(sl[k]||{})[pl]||{};return '<div class="row"><b>'+SL[k]+'</b><span class="mu">'+(b.count||0)+' роликов · в среднем <b style="color:var(--tx)">'+(b.avg||0)+'</b> просм.</span></div>'}).join('')+'</div>';
+ var bf=st.byFormat||{},mxa=1;Object.keys(FMT).forEach(function(k){mxa=Math.max(mxa,((bf[k]||{})[pl]||{}).avg||0)});
+ h+='<h2>Форматы · '+NM[pl]+'</h2><div class="card">'+Object.keys(FMT).map(function(k){var b=(bf[k]||{})[pl]||{};return '<div class="row" style="display:block"><div class="row" style="min-height:0"><b>'+FMT[k]+'</b><span class="mu">'+(b.count||0)+' вид. · ср. '+(b.avg||0)+' · всего '+(b.views||0)+'</span></div><div class="bar"><i style="width:'+Math.round(100*(b.avg||0)/mxa)+'%"></i></div></div>'}).join('')+'</div>';
+ h+='<div class="card mu" style="font-size:13px">Автооптимизация: формат выходит чаще, если его ролики (старше 20 часов) набирают больше просмотров, лайков и комментариев на обеих площадках. Пока у формата меньше 3 таких роликов, он тестируется с весом 1.3.</div>';
  return h}
 
 function vSet(){var s=DRAFT,h='';
@@ -493,7 +503,8 @@ function bind(){var e;
  if(e=$('#en'))e.onchange=function(){DRAFT.enabled=this.checked;api('/api/settings',DRAFT).then(function(){toast(DRAFT.enabled?'Фабрика включена':'Фабрика на паузе');load()})};
  if(e=$('#run'))e.onclick=function(){var b=this;b.disabled=true;api('/api/run',{count:$('#rc').value,format:$('#rf').value}).then(function(){toast('Запущено! Видео придёт через 2–4 минуты');setTimeout(load,4000)}).catch(function(x){toast(x.message)}).then(function(){b.disabled=false})};
  if(e=$('#ce'))e.onclick=function(){api('/api/clear-error',{}).then(load)};
- if(e=$('#an'))e.onclick=function(){api('/api/analytics',{}).then(function(){toast('Аналитика запущена')}).catch(function(x){toast(x.message)})};
+ if(e=$('#an'))e.onclick=function(){api('/api/analytics',{}).then(function(){toast('Обновляю статистику, 1–2 минуты…');setTimeout(load,90000)}).catch(function(x){toast(x.message)})};
+ document.querySelectorAll('[data-pl]').forEach(function(b){b.onclick=function(){window.PL=b.dataset.pl;render()}});
  document.querySelectorAll('[data-ap]').forEach(function(b){b.onclick=function(){b.disabled=true;api('/api/approve',{id:b.dataset.ap,platform:'tiktok'}).then(function(){toast('Публикуем в TikTok…');setTimeout(load,3000)}).catch(function(x){toast(x.message);b.disabled=false})}});
  document.querySelectorAll('[data-dc]').forEach(function(b){b.onclick=function(){if(confirm('Отключить '+b.dataset.dc+'?'))api('/api/disconnect',{platform:b.dataset.dc}).then(load)}});
  document.querySelectorAll('[data-th]').forEach(function(b){b.onclick=function(){collect();DRAFT.theme=b.dataset.th;render()}});
