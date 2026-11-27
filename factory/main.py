@@ -113,8 +113,13 @@ def produce(count=1, fmt=None, no_publish=False, theme=None, force=False, record
                 entry["tiktok"] = safe(publish_tiktok, entry, mp4, m, settings, worker, duration)
         if pub.get("telegram", True):
             cap = m["telegram"]["caption"]
-            if (entry.get("tiktok") or {}).get("status") == "awaiting_approval":
+            tts = (entry.get("tiktok") or {}).get("status")
+            if tts == "awaiting_approval":
                 cap = "⏳ Ждёт одобрения в панели (TikTok)\n" + cap
+            elif tts in ("sent_to_inbox", "uploaded", "processing"):
+                cap = ("🔔 TikTok: черновик уже во «Входящих» → Systembenachrichtigungen → "
+                       "«Dein Inhalt von Station Factory ist bereit» → Posten.\n"
+                       "Подпись с хештегами ниже, её можно скопировать.\n\n") + cap
             entry["telegram"] = safe(telegram.send_video, mp4, cap, cover)
         if record:
             hist.add(entry)
