@@ -62,7 +62,10 @@ def post(path, caption, token, cfg, duration):
                          headers=_h(token))
         d = _check(res)
         _upload(d["upload_url"], path)
-        return {"publish_id": d["publish_id"], "mode": "inbox", "status": "sent_to_inbox"}
+        out = {"publish_id": d["publish_id"], "mode": "inbox", "status": "uploaded"}
+        out.update(wait_status(token, d["publish_id"], tries=15))  # реальный статус обработки у TikTok
+        print("TikTok inbox status:", out)
+        return out
 
     info = creator_info(token)
     maxd = info.get("max_video_post_duration_sec") or 600
