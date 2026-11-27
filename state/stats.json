@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T18:11:14Z",
+ "updated": "2026-11-27T19:59:26Z",
  "weights": {
   "translate": 1.3,
   "find_error": 1.3,
@@ -15,30 +15,32 @@
  "platforms": {
   "youtube": {
    "count": 3,
-   "views": 126,
-   "avg": 42,
+   "views": 133,
+   "avg": 44,
    "likes": 2,
    "comments": 0
   },
   "tiktok": {
-   "count": 0,
-   "views": 0,
-   "avg": 0,
-   "likes": 0,
+   "count": 2,
+   "views": 388,
+   "avg": 194,
+   "likes": 5,
    "comments": 0,
-   "connected": false
+   "accountVideos": 2,
+   "accountViews": 388,
+   "connected": true
   }
  },
  "daily": [
   {
    "date": "2026-11-27",
    "views": {
-    "youtube": 126,
-    "tiktok": 0
+    "youtube": 133,
+    "tiktok": 388
    },
    "videos": {
     "youtube": 3,
-    "tiktok": 0
+    "tiktok": 2
    }
   }
  ],
@@ -62,16 +64,16 @@
   "18:00": {
    "youtube": {
     "count": 1,
-    "views": 0,
-    "avg": 0,
+    "views": 7,
+    "avg": 7,
     "likes": 0,
     "comments": 0
    },
    "tiktok": {
-    "count": 0,
-    "views": 0,
-    "avg": 0,
-    "likes": 0,
+    "count": 2,
+    "views": 388,
+    "avg": 194,
+    "likes": 5,
     "comments": 0
    }
   },
@@ -102,10 +104,10 @@
     "comments": 0
    },
    "tiktok": {
-    "count": 0,
-    "views": 0,
-    "avg": 0,
-    "likes": 0,
+    "count": 1,
+    "views": 201,
+    "avg": 201,
+    "likes": 3,
     "comments": 0
    },
    "weight": 1.3,
@@ -240,16 +242,16 @@
   "mistakes": {
    "youtube": {
     "count": 1,
-    "views": 0,
-    "avg": 0,
+    "views": 7,
+    "avg": 7,
     "likes": 0,
     "comments": 0
    },
    "tiktok": {
-    "count": 0,
-    "views": 0,
-    "avg": 0,
-    "likes": 0,
+    "count": 1,
+    "views": 187,
+    "avg": 187,
+    "likes": 2,
     "comments": 0
    },
    "weight": 1.3,
@@ -276,6 +278,6 @@
  },
  "totals": {
   "videos": 5,
-  "views": 126
+  "views": 521
  }
 }

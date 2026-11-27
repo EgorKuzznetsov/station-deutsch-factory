@@ -95,7 +95,14 @@
   "tiktok": {
    "publish_id": "v_inbox_file~v2.7712883450558318614",
    "mode": "inbox",
-   "status": "sent_to_inbox"
+   "status": "published",
+   "post_id": "7712888535040150823",
+   "stats": {
+    "views": 201,
+    "likes": 3,
+    "comments": 0,
+    "shares": 0
+   }
   },
   "telegram": {
    "ok": true
@@ -118,7 +125,7 @@
    "privacy": "public",
    "status": "published",
    "stats": {
-    "views": 0,
+    "views": 7,
     "likes": 0,
     "comments": 0,
     "privacy": "public"
@@ -127,7 +134,14 @@
   "tiktok": {
    "publish_id": "v_inbox_file~v2.7712897545554659351",
    "mode": "inbox",
-   "status": "processing"
+   "status": "published",
+   "post_id": "7712905972733250855",
+   "stats": {
+    "views": 187,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0
+   }
   },
   "telegram": {
    "ok": true
