@@ -1,1 +1,23 @@
-[]
+[
+ {
+  "id": "20261127-054041-70e874",
+  "created": "2026-11-27T05:40:49Z",
+  "format": "translate",
+  "level": "A2",
+  "lang": "uk",
+  "theme": "berlin",
+  "duration": 12.5,
+  "title": "Що означає: «Passt schon.» Німецька за 10 секунд",
+  "key": "translate:p02",
+  "runId": "45947147890",
+  "youtube": {
+   "status": "not_connected"
+  },
+  "tiktok": {
+   "status": "not_connected"
+  },
+  "telegram": {
+   "ok": true
+  }
+ }
+]
