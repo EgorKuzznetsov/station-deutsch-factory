@@ -19,5 +19,29 @@
   "telegram": {
    "ok": true
   }
+ },
+ {
+  "id": "20261127-070219-ec6bee",
+  "created": "2026-11-27T07:02:37Z",
+  "format": "a1_vs_b2",
+  "level": "B2",
+  "lang": "uk",
+  "theme": "berlin",
+  "duration": 13.7,
+  "title": "«Es gibt ein Problem.»: як сказати на B2?",
+  "key": "a1_vs_b2:c03,c13",
+  "runId": "45955642059",
+  "youtube": {
+   "id": "fQ4MRMhA4CU",
+   "url": "https://youtube.com/shorts/fQ4MRMhA4CU",
+   "privacy": "public",
+   "status": "published"
+  },
+  "tiktok": {
+   "status": "not_connected"
+  },
+  "telegram": {
+   "ok": true
+  }
  }
 ]
