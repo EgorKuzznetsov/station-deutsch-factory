@@ -3,7 +3,8 @@
   "translate:p02",
   "a1_vs_b2:c03,c13",
   "mini_exam:f43,n:Sprache,n:Stadt",
-  "translate:n:Wind"
+  "translate:n:Wind",
+  "mistakes:m10,m23,m30"
  ],
  "items": {
   "p02": "2026-11-27",
@@ -12,6 +13,9 @@
   "f43": "2026-11-27",
   "n:Sprache": "2026-11-27",
   "n:Stadt": "2026-11-27",
-  "n:Wind": "2026-11-27"
+  "n:Wind": "2026-11-27",
+  "m10": "2026-11-27",
+  "m23": "2026-11-27",
+  "m30": "2026-11-27"
  }
 }

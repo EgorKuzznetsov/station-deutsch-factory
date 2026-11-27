@@ -100,5 +100,31 @@
   "telegram": {
    "ok": true
   }
+ },
+ {
+  "id": "20261127-170127-47ab97",
+  "created": "2026-11-27T17:01:44Z",
+  "format": "mistakes",
+  "level": "B1",
+  "lang": "uk",
+  "theme": "berlin",
+  "duration": 16.6,
+  "title": "«Ich bin vor 2 Jahren hier.»: так не кажуть!",
+  "key": "mistakes:m10,m23,m30",
+  "runId": "46038372918",
+  "youtube": {
+   "id": "NwvuIZx3pes",
+   "url": "https://youtube.com/shorts/NwvuIZx3pes",
+   "privacy": "public",
+   "status": "published"
+  },
+  "tiktok": {
+   "publish_id": "v_inbox_file~v2.7712897545554659351",
+   "mode": "inbox",
+   "status": "processing"
+  },
+  "telegram": {
+   "ok": true
+  }
  }
 ]
