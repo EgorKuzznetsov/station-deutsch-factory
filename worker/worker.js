@@ -34,7 +34,7 @@ const DEFAULTS = {
 };
 
 const YT_SCOPES = "https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.readonly";
-const TT_SCOPES = "user.info.basic,video.upload,video.publish,video.list";
+const TT_SCOPES = "user.info.basic,video.upload,video.publish";
 
 // ------------------------------------------------------------------ утилиты
 const json = (data, status = 200, headers = {}) =>
