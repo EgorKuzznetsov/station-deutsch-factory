@@ -292,7 +292,8 @@ export default {
       if (p === "/terms") return html(page("Terms of Service", TERMS));
       if (p === "/health") return json({ ok: true });
       // Подтверждение адреса для TikTok (URL properties → URL prefix → файл-подпись)
-      if (env.TIKTOK_VERIFY_NAME && p === "/" + String(env.TIKTOK_VERIFY_NAME).replace(/^\//, ""))
+      if (env.TIKTOK_VERIFY_CONTENT && (/^\/tiktok[A-Za-z0-9]+\.txt$/.test(p) ||
+          (env.TIKTOK_VERIFY_NAME && p === "/" + String(env.TIKTOK_VERIFY_NAME).replace(/^\//, ""))))
         return new Response(String(env.TIKTOK_VERIFY_CONTENT || ""), { headers: { "content-type": "text/plain; charset=utf-8" } });
 
       // --- API фабрики (GitHub Actions)
