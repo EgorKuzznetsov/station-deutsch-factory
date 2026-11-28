@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-28T01:30:59Z",
+ "updated": "2026-11-28T09:45:25Z",
  "weights": {
   "translate": 1.3,
   "find_error": 1.3,
@@ -22,12 +22,12 @@
   },
   "tiktok": {
    "count": 2,
-   "views": 776,
-   "avg": 388,
-   "likes": 10,
+   "views": 1073,
+   "avg": 536,
+   "likes": 13,
    "comments": 0,
    "accountVideos": 2,
-   "accountViews": 776,
+   "accountViews": 1073,
    "connected": true
   }
  },
@@ -47,7 +47,7 @@
    "date": "2026-11-28",
    "views": {
     "youtube": 1,
-    "tiktok": 388
+    "tiktok": 685
    },
    "videos": {
     "youtube": 0,
@@ -82,9 +82,9 @@
    },
    "tiktok": {
     "count": 2,
-    "views": 776,
-    "avg": 388,
-    "likes": 10,
+    "views": 1073,
+    "avg": 536,
+    "likes": 13,
     "comments": 0
    }
   },
@@ -116,13 +116,13 @@
    },
    "tiktok": {
     "count": 1,
-    "views": 460,
-    "avg": 460,
+    "views": 521,
+    "avg": 521,
     "likes": 6,
     "comments": 0
    },
    "weight": 1.3,
-   "mature": 0
+   "mature": 1
   },
   "find_error": {
    "youtube": {
@@ -194,7 +194,7 @@
     "comments": 0
    },
    "weight": 1.3,
-   "mature": 0
+   "mature": 1
   },
   "five_words": {
    "youtube": {
@@ -260,9 +260,9 @@
    },
    "tiktok": {
     "count": 1,
-    "views": 316,
-    "avg": 316,
-    "likes": 4,
+    "views": 552,
+    "avg": 552,
+    "likes": 7,
     "comments": 0
    },
    "weight": 1.3,
@@ -284,11 +284,11 @@
     "comments": 0
    },
    "weight": 1.3,
-   "mature": 0
+   "mature": 1
   }
  },
  "totals": {
   "videos": 5,
-  "views": 910
+  "views": 1207
  }
 }
