@@ -146,5 +146,31 @@
   "telegram": {
    "ok": true
   }
+ },
+ {
+  "id": "20261128-110137-f68277",
+  "created": "2026-11-28T11:01:47Z",
+  "format": "article",
+  "level": "A1",
+  "lang": "uk",
+  "theme": "berlin",
+  "duration": 18.7,
+  "title": "der, die чи das? Kaffee, Woche, Nachbar",
+  "key": "article:n:Kaffee,n:Nachbar,n:Woche",
+  "runId": "46137839778",
+  "youtube": {
+   "id": "3Ei1rZxejUI",
+   "url": "https://youtube.com/shorts/3Ei1rZxejUI",
+   "privacy": "public",
+   "status": "published"
+  },
+  "tiktok": {
+   "publish_id": "v_inbox_file~v2.7713175858466490390",
+   "mode": "inbox",
+   "status": "processing"
+  },
+  "telegram": {
+   "ok": true
+  }
  }
 ]

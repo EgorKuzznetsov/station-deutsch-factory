@@ -4,7 +4,8 @@
   "a1_vs_b2:c03,c13",
   "mini_exam:f43,n:Sprache,n:Stadt",
   "translate:n:Wind",
-  "mistakes:m10,m23,m30"
+  "mistakes:m10,m23,m30",
+  "article:n:Kaffee,n:Nachbar,n:Woche"
  ],
  "items": {
   "p02": "2026-11-27",
@@ -16,6 +17,9 @@
   "n:Wind": "2026-11-27",
   "m10": "2026-11-27",
   "m23": "2026-11-27",
-  "m30": "2026-11-27"
+  "m30": "2026-11-27",
+  "n:Kaffee": "2026-11-28",
+  "n:Nachbar": "2026-11-28",
+  "n:Woche": "2026-11-28"
  }
 }
