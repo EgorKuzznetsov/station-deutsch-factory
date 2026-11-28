@@ -185,5 +185,31 @@
   "telegram": {
    "ok": true
   }
+ },
+ {
+  "id": "20261128-170148-070aa9",
+  "created": "2026-11-28T17:01:56Z",
+  "format": "five_words",
+  "level": "B1",
+  "lang": "uk",
+  "theme": "mint",
+  "duration": 16.4,
+  "title": "5 німецьких слів: офіс і документи",
+  "key": "five_words:n:Amt,n:Behörde,n:Büro,n:Chef,n:Steuer",
+  "runId": "46168190156",
+  "youtube": {
+   "id": "PqO3UbI3aAo",
+   "url": "https://youtube.com/shorts/PqO3UbI3aAo",
+   "privacy": "public",
+   "status": "published"
+  },
+  "tiktok": {
+   "publish_id": "v_inbox_file~v2.7713268669245114390",
+   "mode": "inbox",
+   "status": "processing"
+  },
+  "telegram": {
+   "ok": true
+  }
  }
 ]

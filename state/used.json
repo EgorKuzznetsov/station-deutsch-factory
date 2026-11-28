@@ -5,7 +5,8 @@
   "mini_exam:f43,n:Sprache,n:Stadt",
   "translate:n:Wind",
   "mistakes:m10,m23,m30",
-  "article:n:Kaffee,n:Nachbar,n:Woche"
+  "article:n:Kaffee,n:Nachbar,n:Woche",
+  "five_words:n:Amt,n:Behörde,n:Büro,n:Chef,n:Steuer"
  ],
  "items": {
   "p02": "2026-11-27",
@@ -20,6 +21,11 @@
   "m30": "2026-11-27",
   "n:Kaffee": "2026-11-28",
   "n:Nachbar": "2026-11-28",
-  "n:Woche": "2026-11-28"
+  "n:Woche": "2026-11-28",
+  "n:Amt": "2026-11-28",
+  "n:Behörde": "2026-11-28",
+  "n:Büro": "2026-11-28",
+  "n:Chef": "2026-11-28",
+  "n:Steuer": "2026-11-28"
  }
 }
