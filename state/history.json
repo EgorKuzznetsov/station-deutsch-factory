@@ -165,7 +165,7 @@
    "status": "published",
    "stats": {
     "views": 0,
-    "likes": 0,
+    "likes": 1,
     "comments": 0,
     "privacy": "public"
    }
@@ -176,7 +176,7 @@
    "status": "published",
    "post_id": "7713182722721664289",
    "stats": {
-    "views": 12,
+    "views": 40,
     "likes": 1,
     "comments": 0,
     "shares": 0
