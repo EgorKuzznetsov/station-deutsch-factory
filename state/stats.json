@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-28T09:45:25Z",
+ "updated": "2026-11-28T11:43:26Z",
  "weights": {
   "translate": 1.3,
   "find_error": 1.3,
@@ -14,20 +14,20 @@
  },
  "platforms": {
   "youtube": {
-   "count": 3,
+   "count": 4,
    "views": 134,
-   "avg": 45,
+   "avg": 34,
    "likes": 2,
    "comments": 0
   },
   "tiktok": {
-   "count": 2,
-   "views": 1073,
-   "avg": 536,
-   "likes": 13,
+   "count": 3,
+   "views": 1089,
+   "avg": 363,
+   "likes": 14,
    "comments": 0,
-   "accountVideos": 2,
-   "accountViews": 1073,
+   "accountVideos": 3,
+   "accountViews": 1089,
    "connected": true
   }
  },
@@ -47,28 +47,28 @@
    "date": "2026-11-28",
    "views": {
     "youtube": 1,
-    "tiktok": 685
+    "tiktok": 701
    },
    "videos": {
-    "youtube": 0,
-    "tiktok": 0
+    "youtube": 1,
+    "tiktok": 1
    }
   }
  ],
  "slots": {
   "12:00": {
    "youtube": {
-    "count": 1,
+    "count": 2,
     "views": 120,
-    "avg": 120,
+    "avg": 60,
     "likes": 1,
     "comments": 0
    },
    "tiktok": {
-    "count": 0,
-    "views": 0,
-    "avg": 0,
-    "likes": 0,
+    "count": 1,
+    "views": 12,
+    "avg": 12,
+    "likes": 1,
     "comments": 0
    }
   },
@@ -82,8 +82,8 @@
    },
    "tiktok": {
     "count": 2,
-    "views": 1073,
-    "avg": 536,
+    "views": 1077,
+    "avg": 538,
     "likes": 13,
     "comments": 0
    }
@@ -116,8 +116,8 @@
    },
    "tiktok": {
     "count": 1,
-    "views": 521,
-    "avg": 521,
+    "views": 522,
+    "avg": 522,
     "likes": 6,
     "comments": 0
    },
@@ -144,17 +144,17 @@
   },
   "article": {
    "youtube": {
-    "count": 0,
+    "count": 1,
     "views": 0,
     "avg": 0,
     "likes": 0,
     "comments": 0
    },
    "tiktok": {
-    "count": 0,
-    "views": 0,
-    "avg": 0,
-    "likes": 0,
+    "count": 1,
+    "views": 12,
+    "avg": 12,
+    "likes": 1,
     "comments": 0
    },
    "weight": 1.3,
@@ -260,8 +260,8 @@
    },
    "tiktok": {
     "count": 1,
-    "views": 552,
-    "avg": 552,
+    "views": 555,
+    "avg": 555,
     "likes": 7,
     "comments": 0
    },
@@ -288,7 +288,7 @@
   }
  },
  "totals": {
-  "videos": 5,
-  "views": 1207
+  "videos": 6,
+  "views": 1223
  }
 }

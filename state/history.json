@@ -98,7 +98,7 @@
    "status": "published",
    "post_id": "7712888535040150823",
    "stats": {
-    "views": 521,
+    "views": 522,
     "likes": 6,
     "comments": 0,
     "shares": 0
@@ -137,7 +137,7 @@
    "status": "published",
    "post_id": "7712905972733250855",
    "stats": {
-    "views": 552,
+    "views": 555,
     "likes": 7,
     "comments": 0,
     "shares": 0
@@ -162,12 +162,25 @@
    "id": "3Ei1rZxejUI",
    "url": "https://youtube.com/shorts/3Ei1rZxejUI",
    "privacy": "public",
-   "status": "published"
+   "status": "published",
+   "stats": {
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "privacy": "public"
+   }
   },
   "tiktok": {
    "publish_id": "v_inbox_file~v2.7713175858466490390",
    "mode": "inbox",
-   "status": "processing"
+   "status": "published",
+   "post_id": "7713182722721664289",
+   "stats": {
+    "views": 12,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0
+   }
   },
   "telegram": {
    "ok": true
