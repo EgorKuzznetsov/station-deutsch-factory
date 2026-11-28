@@ -98,7 +98,7 @@
    "status": "published",
    "post_id": "7712888535040150823",
    "stats": {
-    "views": 522,
+    "views": 525,
     "likes": 6,
     "comments": 0,
     "shares": 0
@@ -137,7 +137,7 @@
    "status": "published",
    "post_id": "7712905972733250855",
    "stats": {
-    "views": 555,
+    "views": 558,
     "likes": 7,
     "comments": 0,
     "shares": 0
@@ -164,7 +164,7 @@
    "privacy": "public",
    "status": "published",
    "stats": {
-    "views": 0,
+    "views": 14,
     "likes": 1,
     "comments": 0,
     "privacy": "public"
@@ -176,8 +176,8 @@
    "status": "published",
    "post_id": "7713182722721664289",
    "stats": {
-    "views": 40,
-    "likes": 1,
+    "views": 306,
+    "likes": 4,
     "comments": 0,
     "shares": 0
    }
@@ -201,12 +201,25 @@
    "id": "PqO3UbI3aAo",
    "url": "https://youtube.com/shorts/PqO3UbI3aAo",
    "privacy": "public",
-   "status": "published"
+   "status": "published",
+   "stats": {
+    "views": 20,
+    "likes": 0,
+    "comments": 0,
+    "privacy": "public"
+   }
   },
   "tiktok": {
    "publish_id": "v_inbox_file~v2.7713268669245114390",
    "mode": "inbox",
-   "status": "processing"
+   "status": "published",
+   "post_id": "7713269484017962273",
+   "stats": {
+    "views": 85,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0
+   }
   },
   "telegram": {
    "ok": true
